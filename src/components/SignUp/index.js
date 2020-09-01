@@ -26,7 +26,7 @@ class SignUp extends Component {
     signSubmit(e) {
         if (this.state.flag === '1') {
             console.log('oi')
-            var url = '';
+            var url = 'http://127.0.0.1:8000/api/usuarios/';
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
