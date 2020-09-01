@@ -6,6 +6,7 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            erro: false,
 
             signPassword1: '',
             signPassword2: '',
@@ -17,7 +18,8 @@ class SignUp extends Component {
             last_name: '',
             fone: '',
             password: '',
-            img: ''
+            img: '',
+            groups: "http://127.0.0.1:8000/api/groups/1/",
 
         }
         this.signSubmit = this.signSubmit.bind(this);
@@ -32,10 +34,13 @@ class SignUp extends Component {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     email: this.state.email, first_name: this.state.first_name,
-                    last_name: this.state.last_name, fone: this.state.fone, password: this.state.password
+                    last_name: this.state.last_name, fone: this.state.fone, password: this.state.password,
+                    //groups: this.state.groups
                 })
             };
             requestOptions.headers["Authorization"] = "Token 89cc7e6ffc781d3dee5507f531013bcd0c9009ba"
+            //requestOptions.headers['email'] = 'danielvenna2@gmail.com'
+            //requestOptions.headers['password'] = 'kauffmann'
             fetch(url, requestOptions)
                 .then(response => response.json())
                 .then(data => {
@@ -59,7 +64,8 @@ class SignUp extends Component {
                         <img src={signUp2} alt="" />
                     </div>
                     <form className="signUp" onSubmit={this.signSubmit}>
-                        <input type="email" className="emailInput" placeholder='Digite um email' required />
+                        <input type="email" className="emailInput" placeholder='Digite um email' required
+                        onChange={(e) => { this.setState({email: e.target.value}) }}/>
 
 
                         <div className='firstAndLastName'>
@@ -91,6 +97,7 @@ class SignUp extends Component {
                                 } if (this.state.signPassword1 === this.state.signPassword2) {
                                     await this.setState({ verificacao: '' })
                                     await this.setState({ flag: '1' })
+                                    this.setState({password: this.state.signPassword2})
                                 }
                             }} />
 
