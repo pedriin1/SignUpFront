@@ -61,5 +61,5 @@ img{
     border-bottom: 1px solid  #8e46ff;
 }
 .signUp input:focus{
-    border-bottom: 1px solid  #6743ff;
+    border-bottom: 1px solid  green;
 }
