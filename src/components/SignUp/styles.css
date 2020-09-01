@@ -1,96 +1,65 @@
-.signUpAndLogin{
-    min-height: 50vh;
-    width: 60vw;
-    display: flex;
-    background-color: rgb(250, 248, 248);
-    padding: 3rem;
+.signUpsection{
+    background-color: white;
+    padding-bottom: 1rem;
+    border-radius: 10px;
     
-    border-radius: 5px;
-    justify-content: space-around;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.71);
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.SignUpText{
     
+    font-size: 2rem;
+    text-align: left;
+    margin: 1rem 0rem;
+    margin-left: 1rem;
 }
-
-.forms{
-    display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-    margin-left: 2rem;
+.firstAndLastName{
+    width: 90%;
+    display:flex;
+    flex-direction: row;
 }
-    .signUp{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-        input{
-            width: 100%;
-            border-radius: 5px;
-            background-color: rgb(240, 239, 239);
-            margin-bottom: 0.2rem;
-            padding: 0.5rem;
-            border: none;
-            outline: none;
-            border-bottom: 2px solid  rgb(240, 239, 239);
-        }
-        input:hover{
-            border-bottom: 2px solid orange;
-        }
-        input:focus{
-            border-bottom: 2px solid green;
-        }
-.signIn{
+.signUp{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.signIn h1{
-    text-align: center;
-    
+.bi .bi-file-lock2{
+    height: 350px;
 }
-
-button{
-    border: none;
-    background-color: rgb(20, 190, 20);
-    border-radius: 5px;
-    color: white;
-    padding: 0.5rem;
-    width: 200px;
-    transition: all 1s;
-    margin-top: 0.5rem;
-
+.firstNameSign{
+    margin-right: 0.3rem;
 }
-button:hover{
-    background-color: rgb(15, 131, 15);
-    font-size: 1rem;
-
-}
-button:active{
+.signUp input{
+    background: transparent;
+    width: 90%;
     outline: none;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
 }
-@media(max-width:1200px){
-    .signUpAndLogin{
-        min-height: 50vh;
-        height: 80vh;
-        width: 60vw;
-        display: flex;
-        background-color: rgb(250, 248, 248);
-        padding: 3rem;
-        flex-direction: column;
-        border-radius: 5px;
-        justify-content: space-between;
-        margin-top: 6rem;
-    }
-    .forms{
-        flex-direction: row;
-    }
-    .signIn{
-        margin-left: 2rem;
-    }
-    .signIn input{
-        width: 100%;
-    }
-    .signUp input{
-        width: 100%;
-    }
+.inputArquivo {
+
+    font-size: 13px;
+    border: none;
+    font-family: 'Roboto';
+    border: none !important; 
+}
+.verify{
+    margin-top: -1rem;
+    text-align: left !important;
+    font-size: 12px;
+    color: red
+}
+.signUp input:hover{
+    border-bottom: 1px solid  #8e46ff;
+}
+.signUp input:focus{
+    border-bottom: 1px solid  #6743ff;
 }
